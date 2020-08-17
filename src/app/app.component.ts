@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-list-app';
-}
+	public items = []; 
+  public newTask; 
+  
+	public addToList() { 
+		if (this.newTask == '') { 
+		} 
+		else { 
+			this.items.push(this.newTask); 
+			this.newTask = ''; 
+		} 
+	} 
+	public deleteTask(index) { 
+		this.items.splice(index, 1); 
+	} 
+} 
+
